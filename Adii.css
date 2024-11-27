@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.form-header {
+    text-align: center;
+    background-color: #00bcd4;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.form-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.form-header p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+.evaluation-form {
+    padding: 20px;
+}
+
+.evaluation-form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.evaluation-form input[type="text"],
+.evaluation-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+.rating-group {
+    /* display: flex; */
+    gap: 5px;
+    /* margin: 10px 0 10px; */
+    direction: rtl;
+}
+
+.rating-group span {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+.star{
+    margin-right: 80px;
+    justify-content: space-around;
+}
+
+.rating-group span:hover,
+.rating-group span:hover ~ span {
+    color: #f0c30f;
+}
+
+.submit-btn {
+    background-color: #00bcd4;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20%;
+    margin: 0px 220px;
+}
+
+.submit-btn:hover {
+    background-color: #008c9e;
+}
+
+.required {
+    color: red;
+}
