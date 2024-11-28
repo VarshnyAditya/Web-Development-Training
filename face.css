@@ -1,0 +1,26 @@
+*{
+    background-color: gainsboro;
+}
+.fac{
+    color: blue;
+}
+.hello{
+    color: blue;
+    background-color: white;
+}
+.log{
+    background-color: blue;
+    color: white;
+    padding: 0px 60px 0px 60px;
+}
+.book{
+    background-color: white;
+    margin: 0px 350px 0px 350px;
+    padding: 8px;
+}
+.bb{
+    background-color: white;
+}
+.for{
+    background-color: white;
+}
