@@ -1,0 +1,61 @@
+.container{
+    background-color: white;
+    height: 100vh;
+}
+h3{
+    padding: 15px;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 60%;
+    height: 50%;
+}
+.right2{
+    background-color: blue;
+    width: 28%;
+    height: 500px;
+    border-radius: 50px;
+    position: relative;
+    transform: rotate(3deg);
+    margin: 50px;
+
+}
+.right1{
+    transform: rotate(-8deg);
+    position: absolute;
+    background-color: yellow;
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    margin: 20px;
+}
+.right{
+    transform: rotate(8deg);
+    position: absolute;
+    background-color: green;
+    height: 500px;
+    border-radius: 50px;
+    margin: 10px;
+    padding-top: 2px;
+    padding-left: 20px ;
+    padding-right: 20px;
+}
+.right h1{
+    font-size: 75px;
+}
+.left h1{
+    font-weight: 1000;
+    font-size: 70px;
+}
+.left h2{
+    margin: 20px;
+}
+.left button{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
