@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 10px 0 5px;
+        }
+        .card p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .card .price {
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            margin: 10px 90px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="productContainer"></div>
+
+    <script>
+        const products = [
+            {
+                image: {
+                    thumbnail: "https://www.garnishandglaze.com/wp-content/uploads/2014/06/waffle4.jpg",
+                    mobile: "./assets/images/image-waffle-mobile.jpg",
+                    tablet: "./assets/images/image-waffle-tablet.jpg",
+                    desktop: "./assets/images/image-waffle-desktop.jpg"
+                },
+                name: "Waffle with Berries",
+                category: "Waffle",
+                price: 6.50
+            },
+            {
+                image: {
+                    thumbnail: "https://www.vanillabeancuisine.com/wp-content/uploads/2023/09/Creme-Brulee-21-720x720.jpg",
+                    mobile: "./assets/images/image-creme-brulee-mobile.jpg",
+                    tablet: "./assets/images/image-creme-brulee-tablet.jpg",
+                    desktop: "./assets/images/image-creme-brulee-desktop.jpg"
+                },
+                name: "Vanilla Bean Crème Brûlée",
+                category: "Crème Brûlée",
+                price: 7.00
+            },
+            {
+                image: {
+                    thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4jPMBagClOg2gi89fda6BcAAy0AK-yPhJw&s",
+                    mobile: "./assets/images/image-macaron-mobile.jpg",
+                    tablet: "./assets/images/image-macaron-tablet.jpg",
+                    desktop: "./assets/images/image-macaron-desktop.jpg"
+                },
+                name: "Macaron Mix of Five",
+                category: "Macaron",
+                price: 8.00
+            },
+            {
+                image: {
+                    thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQqYqsdktebIHD04l5bVaHN95pP7LfJw0qVQ&s",
+                    mobile: "./assets/images/image-tiramisu-mobile.jpg",
+                    tablet: "./assets/images/image-tiramisu-tablet.jpg",
+                    desktop: "./assets/images/image-tiramisu-desktop.jpg"
+                },
+                name: "Classic Tiramisu",
+                category: "Tiramisu",
+                price: 5.50
+            },
+            {
+                image: {
+                    thumbnail: "https://goodlfe.com/cdn/shop/articles/20230817182203-baklava.png?v=1692296832",
+                    mobile: "./assets/images/image-baklava-mobile.jpg",
+                    tablet: "./assets/images/image-baklava-tablet.jpg",
+                    desktop: "./assets/images/image-baklava-desktop.jpg"
+                },
+                name: "Pistachio Baklava",
+                category: "Baklava",
+                price: 4.00
+            },
+            {
+                image: {
+                    thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxz-xbeoE4fgbiAu6v7rD4WlqR7t8ECvtPfg&s",
+                    mobile: "./assets/images/image-meringue-mobile.jpg",
+                    tablet: "./assets/images/image-meringue-tablet.jpg",
+                    desktop: "./assets/images/image-meringue-desktop.jpg"
+                },
+                name: "Lemon Meringue Pie",
+                category: "Pie",
+                price: 5.00
+            },
+            {
+                image: {
+                    thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrw5Aqhuo-gAqBJp9HsA1NUUcAUIYE76EPIA&s",
+                    mobile: "./assets/images/image-cake-mobile.jpg",
+                    tablet: "./assets/images/image-cake-tablet.jpg",
+                    desktop: "./assets/images/image-cake-desktop.jpg"
+                },
+                name: "Red Velvet Cake",
+                category: "Cake",
+                price: 4.50
+            },
+            {
+                image: {
+                    thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIqg7g_90Oa08Nu5MNd0jPo5cnL6repiL5VQ&s",
+                    mobile: "./assets/images/image-brownie-mobile.jpg",
+                    tablet: "./assets/images/image-brownie-tablet.jpg",
+                    desktop: "./assets/images/image-brownie-desktop.jpg"
+                },
+                name: "Salted Caramel Brownie",
+                category: "Brownie",
+                price: 4.50
+            },
+            {
+                image: {
+                    thumbnail: "https://myfoodstory.com/wp-content/uploads/2021/02/How-to-make-Panna-Cotta-Classic-Vanilla-4.jpg",
+                    mobile: "./assets/images/image-panna-cotta-mobile.jpg",
+                    tablet: "./assets/images/image-panna-cotta-tablet.jpg",
+                    desktop: "./assets/images/image-panna-cotta-desktop.jpg"
+                },
+                name: "Vanilla Panna Cotta",
+                category: "Panna Cotta",
+                price: 6.50
+            }
+        ];
+
+        const productContainer = document.getElementById('productContainer');
+
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            card.innerHTML = `
+                <img src="${product.image.thumbnail}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.category}</p>
+                <p class="price">$${product.price.toFixed(2)}</p>
+            `;
+
+            productContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>
