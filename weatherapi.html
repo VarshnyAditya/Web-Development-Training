@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="weatherapi.css">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="search-box">
+          <input type="text" placeholder="Enter your location" class="input-box">
+          <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+        </div>
+      </div>
+      <div class="location_not_found">
+        <h1>Sorry, Location not found!</h1>
+        <img src="https://media.istockphoto.com/id/1308342065/vector/folded-location-map-with-marker-city-map-with-pin-pointer-gps-navigation-map-with-city.jpg?s=612x612&w=0&k=20&c=E9DP4dIwSdwaveNwcYU2LzBeKuBoKLa7nsTxTWDHObw=" alt="404 Error">
+      </div>
+      <div class="weather-body">
+          <img src="https://images.aiscribbles.com/74ae19590bbd465abef9c105feba89f2.png?v=022521" alt="Cloud" class="cloud-image">
+          <div class="weather-box">
+            <p class="temperature">0 <sup>&degC</sup></p>
+            <p class="description">Light Rain</p>
+          </div>
+          <div class="weather-details">
+            <div class="humidity">
+              <i class="fas fa-droplet"></i>
+              <div class="text">
+                <span id="humidity">45%</span>
+                <p>Humidity</p>
+              </div>
+            </div>
+
+            <div class="wind">
+              <i class="fas fa-wind"></i>
+              <div class="text">
+                <span id="wind-speed">12km/H</span>
+                <p>Wind Speed</p>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+    <script src="weatherapi.js"></script>
+    <script src="https://kit.fontawesome.com/389ceea33b.js" crossorigin="anonymous"></script>
+  </body>
+</html>
